@@ -1,0 +1,1261 @@
+/* --- Variables Globales --- */
+:root {
+    /* Paleta Principal */
+    --bg-dark: #1B1F23;
+    --card-bg: #252a2e;
+    --text-light: #F5F7FA;
+    --text-muted: #A3BAC3;
+    --white-pure: #ffffff;
+
+    /* Acentos */
+    --accent-blue: #00D1FF;
+    --accent-green: #2ECC71;
+
+    /* Terminal */
+    --terminal-bg: #0c0c0c;
+    --terminal-header: #1f1f1f;
+    --terminal-border: #333333;
+
+    /* Motion (Manual de Estilo V1.0) */
+    --mechanical-curve: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* --- Utilidades de Texto --- */
+.text-accent-blue {
+    color: var(--accent-blue);
+}
+
+.text-muted-custom {
+    color: var(--text-muted);
+}
+
+.tracking-widest {
+    letter-spacing: 0.15em;
+}
+
+/* Texto Interactivo (Glow) */
+.lead-interactive {
+    color: var(--text-muted);
+    transition: color 0.3s var(--mechanical-curve), text-shadow 0.3s var(--mechanical-curve);
+    cursor: default;
+}
+
+.lead-interactive:hover {
+    color: var(--white-pure);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--white-pure), transparent 70%);
+}
+
+/* --- UI: Navbar --- */
+.navbar {
+    background-color: color-mix(in srgb, var(--bg-dark), transparent 5%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid color-mix(in srgb, var(--text-light), transparent 95%);
+    z-index: 100 !important;
+    /* Capa superior de navegación */
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-size: 0.9rem;
+    transition: color 0.3s var(--mechanical-curve);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-blue) !important;
+}
+
+/* --- UI: Botones --- */
+.btn-accent-green {
+    background-color: var(--accent-green) !important;
+    color: var(--bg-dark) !important;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s var(--mechanical-curve);
+    position: relative;
+    z-index: 1;
+}
+
+.btn-accent-green:hover {
+    transform: translateY(-3px);
+    color: var(--text-light) !important;
+    box-shadow: 0 10px 40px -5px color-mix(in srgb, var(--accent-green), transparent 60%),
+        0 0 15px color-mix(in srgb, var(--accent-green), transparent 85%);
+}
+
+.btn-accent-green:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--accent-green), transparent 40%);
+}
+
+/* Launcher Compacto (Píldora) */
+.terminal-trigger.compact {
+    background: color-mix(in srgb, var(--bg-dark), transparent 40%);
+    border: 1px solid color-mix(in srgb, var(--white-pure), transparent 85%);
+    border-radius: 50px;
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s var(--mechanical-curve);
+    backdrop-filter: blur(5px);
+}
+
+.terminal-trigger.compact:hover {
+    background: color-mix(in srgb, var(--white-pure), transparent 90%);
+    border-color: var(--accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--bg-dark), transparent 20%);
+}
+
+.trigger-icon-box.small-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+/* Iconos Sociales */
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    transition: all 0.3s var(--mechanical-curve);
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: var(--accent-blue);
+    filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent-blue), transparent 40%));
+    transform: translateY(-2px);
+}
+
+/* --- Sección Hero (Index) --- */
+.hero-section {
+    min-height: 80vh;
+    padding: 80px 0;
+}
+
+.hero-section h1 {
+    transition: all 0.3s ease-out;
+    cursor: default;
+    display: inline-block;
+}
+
+.hero-section h1:hover {
+    transform: translateY(-3px);
+    color: var(--white-pure);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--accent-blue), transparent 30%),
+        0 0 20px color-mix(in srgb, var(--accent-blue), transparent 60%);
+}
+
+.hero-image-container {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: transform 0.4s var(--mechanical-curve),
+        filter 0.4s var(--mechanical-curve);
+    cursor: pointer;
+}
+
+/* Borde Cristal (Capa Superior) */
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--text-light);
+    border-radius: 140px 140px 20px 20px;
+    background-color: color-mix(in srgb, var(--text-light), transparent 90%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Placeholder (Capa Inferior) */
+.hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: color-mix(in srgb, var(--accent-blue), var(--bg-dark) 80%);
+    border-radius: 140px 140px 20px 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--bg-dark), transparent 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-container:hover {
+    transform: translateY(-8px) scale(1.01);
+    filter: drop-shadow(0 0 25px color-mix(in srgb, var(--accent-blue), transparent 55%));
+}
+
+/* --- Animaciones Juego --- */
+.interactivos-game {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.player-i,
+.player-I,
+.crowd {
+    position: relative;
+    display: inline-block;
+}
+
+.crowd {
+    transform-origin: bottom;
+    transition: transform 0.2s var(--mechanical-curve);
+}
+
+.the-ball {
+    position: absolute;
+    width: 0.15em;
+    height: 0.15em;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    top: 0.185em;
+    left: 0.06em;
+    opacity: 1;
+    z-index: 10;
+    transition: box-shadow 0.3s var(--mechanical-curve);
+}
+
+.the-ball.is-playing {
+    animation: ball-ping-pong 1.5s ease-in-out forwards;
+    animation-iteration-count: 2;
+    box-shadow: 0 0 8px var(--accent-blue);
+}
+
+.crowd.is-playing {
+    animation: duck-dodge 1.5s infinite ease-in-out;
+}
+
+.player-I.is-playing {
+    animation: header-I 1.5s infinite;
+}
+
+.player-i.is-playing {
+    animation: header-i 1.5s infinite;
+}
+
+@keyframes ball-ping-pong {
+    0% {
+        transform: translate(0, 0);
+        animation-timing-function: ease-out;
+    }
+
+    25% {
+        transform: translate(-2.6em, -1.5em);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: translate(-3.73em, -0.1em);
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: translate(-2.6em, -1.8em);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes duck-dodge {
+
+    0%,
+    45%,
+    55%,
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    20%,
+    30%,
+    70%,
+    80% {
+        transform: translateY(3px) scaleY(0.85);
+    }
+}
+
+@keyframes header-I {
+
+    0%,
+    48%,
+    52%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.8) translateY(4px);
+    }
+}
+
+@keyframes header-i {
+
+    0%,
+    98%,
+    2% {
+        transform: scaleY(0.8) translateY(4px);
+    }
+
+    5%,
+    95% {
+        transform: scaleY(1);
+    }
+}
+
+/* --- Proyectos & Carrusel --- */
+.section-title {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 0 2px;
+}
+
+.section-title::after,
+.section-title::before {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-blue);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.section-title::after {
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+}
+
+.section-title::before {
+    width: 4px;
+    height: 40px;
+    opacity: 0;
+}
+
+.section-title:hover::after {
+    animation: trace-horizontal-snap 0.5s var(--mechanical-curve) forwards;
+}
+
+.section-title:hover::before {
+    animation: trace-vertical-snap 0.5s var(--mechanical-curve) forwards;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    height: 100%;
+    border: 1px solid color-mix(in srgb, var(--bg-dark), transparent 20%);
+    transition: all 0.3s var(--mechanical-curve);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    transition: all 0.5s var(--mechanical-curve);
+    z-index: 0;
+}
+
+.project-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, var(--bg-dark) 100%);
+    z-index: 1;
+}
+
+.project-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 25px color-mix(in srgb, var(--accent-blue), transparent 70%);
+    background: linear-gradient(145deg, color-mix(in srgb, var(--card-bg), var(--white-pure) 5%), var(--bg-dark));
+}
+
+.project-card:hover .project-card-bg {
+    opacity: 0.1;
+    transform: scale(1.05);
+}
+
+.icon-box {
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+    transition: transform 0.3s var(--mechanical-curve);
+}
+
+.project-card:hover .icon-box {
+    filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent-blue), transparent 40%));
+    transform: scale(1.1);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.6s var(--mechanical-curve);
+}
+
+.project-item {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 300px;
+}
+
+.carousel-arrow {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 2.5rem;
+    transition: all 0.3s var(--mechanical-curve);
+    cursor: pointer;
+}
+
+.carousel-arrow:hover {
+    color: var(--accent-green);
+    filter: drop-shadow(0 0 15px var(--accent-blue));
+    transform: translateY(-50%) scale(1.2);
+}
+
+@keyframes trace-horizontal-snap {
+    0% {
+        left: 0;
+        bottom: -10px;
+        opacity: 1;
+    }
+
+    25% {
+        left: calc(100% - 60px);
+        bottom: -10px;
+        opacity: 1;
+    }
+
+    26%,
+    49% {
+        opacity: 0;
+    }
+
+    50% {
+        left: calc(100% - 60px);
+        bottom: 110%;
+        opacity: 1;
+    }
+
+    75% {
+        left: 0;
+        bottom: 110%;
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0;
+        left: 0;
+        bottom: -10px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+        bottom: -10px;
+    }
+}
+
+@keyframes trace-vertical-snap {
+
+    0%,
+    24% {
+        opacity: 0;
+    }
+
+    25% {
+        left: calc(100% - 4px);
+        bottom: -10px;
+        height: 40px;
+        opacity: 1;
+    }
+
+    50% {
+        left: calc(100% - 4px);
+        bottom: calc(110% - 40px);
+        opacity: 1;
+    }
+
+    51%,
+    74% {
+        opacity: 0;
+    }
+
+    75% {
+        left: 0;
+        bottom: calc(110% - 40px);
+        height: 40px;
+        opacity: 1;
+    }
+
+    98% {
+        left: 0;
+        bottom: -10px;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0;
+        bottom: -10px;
+        opacity: 0;
+    }
+}
+
+/* --- Contacto: Layout & Cards --- */
+.info-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid color-mix(in srgb, var(--card-bg), var(--white-pure) 10%);
+    transition: all 0.3s var(--mechanical-curve);
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.info-card:hover {
+    border-color: var(--accent-blue);
+    background: color-mix(in srgb, var(--card-bg), var(--white-pure) 5%);
+    transform: translateX(5px);
+}
+
+.info-card i {
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Layout Stack (CV Switcher) */
+.view-stack {
+    display: grid;
+    grid-template-areas: "stack";
+    align-items: center;
+    min-height: 550px;
+}
+
+.view-stack>* {
+    grid-area: stack;
+    transition: all 0.6s var(--mechanical-curve);
+}
+
+.view-intro {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.view-intro.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+    pointer-events: none;
+}
+
+.view-pdf {
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+    z-index: 20;
+}
+
+.view-pdf.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Modo Expandido (Derecha) */
+.cv-expanded-mode {
+    height: 650px !important;
+    border: 1px solid var(--accent-blue);
+    box-shadow: 0 0 30px color-mix(in srgb, var(--bg-dark), transparent 50%);
+}
+
+#expanded-cv-container [data-action="toggle-cv"] {
+    display: none !important;
+}
+
+/* Z-Index & Interaction Utilities */
+.z-top {
+    z-index: 100 !important;
+    pointer-events: auto !important;
+}
+
+.z-low {
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* --- Terminal / PowerShell --- */
+.terminal-win-container {
+    background: var(--terminal-bg);
+    border: 1px solid var(--terminal-border);
+    border-radius: 8px;
+    box-shadow: 0 30px 60px color-mix(in srgb, var(--bg-dark), transparent 30%);
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+
+.terminal-win-container.maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    /* Manual de estilo: Ventana maximizada */
+    border-radius: 0;
+}
+
+.terminal-win-container.hidden {
+    display: none;
+}
+
+/* Header Terminal */
+.terminal-win-header {
+    background: var(--terminal-header);
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    border-bottom: 1px solid var(--terminal-bg);
+    user-select: none;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Pestañas */
+.win-tabs-scroll-area {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 8px;
+    height: 100%;
+    scrollbar-width: none;
+    margin-right: 4px;
+}
+
+.win-tabs-scroll-area::-webkit-scrollbar {
+    display: none;
+}
+
+#actionsContainer {
+    flex-shrink: 0;
+}
+
+.win-tab {
+    flex: 0 1 220px;
+    min-width: 60px;
+    height: 32px;
+    background: var(--terminal-header);
+    border: 1px solid var(--terminal-border);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-right: -1px;
+    position: relative;
+}
+
+.win-tab span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    margin: 0 5px;
+}
+
+.win-tab:hover {
+    background: color-mix(in srgb, var(--terminal-header), var(--white-pure) 5%);
+}
+
+.win-tab.active {
+    background: var(--terminal-bg);
+    color: var(--white-pure);
+    z-index: 10;
+    border-color: var(--terminal-border);
+    border-bottom: 1px solid var(--terminal-bg);
+    margin-bottom: -1px;
+}
+
+.win-tab.active::before,
+.win-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    pointer-events: none;
+    border: 1px solid transparent;
+}
+
+.win-tab.active::before {
+    left: -10px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 4px 0 0 0 var(--terminal-bg);
+}
+
+.win-tab.active::after {
+    right: -10px;
+    border-bottom-left-radius: 8px;
+    box-shadow: -4px 0 0 0 var(--terminal-bg);
+}
+
+/* Controles Ventana */
+.win-controls,
+.win-tab-actions-fixed {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.control-btn {
+    width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.control-btn:hover {
+    background: color-mix(in srgb, var(--white-pure), transparent 90%);
+    color: var(--white-pure);
+}
+
+.btn-close-win:hover {
+    background: #e81123 !important;
+    color: var(--white-pure);
+}
+
+.win-action-btn {
+    color: var(--text-muted);
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.win-action-btn:hover {
+    color: var(--white-pure);
+}
+
+/* Cuerpo Terminal */
+.terminal-win-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+#terminalForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 20px 0 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-green) transparent;
+}
+
+.form-scroll-area> :last-child {
+    margin-bottom: 0px !important;
+}
+
+/* Zona Botones Fija */
+.form-actions {
+    flex-shrink: 0;
+    padding: 20px;
+    background: var(--terminal-bg);
+    border-top: 1px solid color-mix(in srgb, var(--white-pure), transparent 90%);
+    z-index: 10;
+}
+
+.form-scroll-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-scroll-area::-webkit-scrollbar-thumb {
+    background-color: var(--accent-green);
+    border-radius: 4px;
+}
+
+.form-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Inputs PowerShell */
+.ps-header {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.ps-cmd {
+    color: var(--accent-blue);
+}
+
+.ps-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--white-pure);
+}
+
+.ps-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--terminal-border);
+    color: var(--accent-green);
+    font-family: 'Fira Code', monospace;
+    padding: 5px 0;
+    outline: none;
+    caret-color: var(--accent-green);
+    transition: all 0.2s var(--mechanical-curve);
+}
+
+.ps-input:focus {
+    border-bottom-color: var(--accent-blue);
+    /* Manual V1.0 - A11y Outline replacement */
+    box-shadow: 0 1px 0 var(--accent-blue);
+}
+
+.ps-input::placeholder {
+    color: color-mix(in srgb, var(--white-pure), transparent 75%);
+    font-style: italic;
+}
+
+#userMsg {
+    resize: none;
+    overflow-y: hidden;
+    min-height: 80px;
+    display: block;
+}
+
+.ps-error-msg {
+    color: #ff5555;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+    animation: fadeIn 0.3s var(--mechanical-curve);
+}
+
+/* Dropdown Menu (Nativo) */
+.terminal-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 300px;
+    background-color: var(--terminal-header);
+    border: 1px solid var(--terminal-border);
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--bg-dark), transparent 50%);
+    z-index: 2000;
+    font-family: 'Inter', sans-serif;
+    animation: dropdown-fade 0.15s ease-out;
+    transform-origin: top right;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.terminal-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 13px;
+    text-decoration: none;
+    transition: background 0.1s;
+    user-select: none;
+}
+
+.terminal-dropdown-item:hover {
+    background-color: color-mix(in srgb, var(--white-pure), transparent 92%);
+}
+
+.dropdown-icon {
+    width: 20px;
+    margin-right: 12px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-text {
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+.terminal-dropdown-divider {
+    height: 1px;
+    background-color: var(--terminal-border);
+    margin: 4px 0;
+}
+
+.dropdown-header {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--terminal-border);
+    padding-bottom: 4px;
+    color: var(--text-muted);
+}
+
+/* --- Helpers & Media Queries --- */
+.d-none {
+    display: none !important;
+}
+
+.fade-transition {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.fade-transition.show {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        flex: 0 0 100%;
+    }
+
+    .carousel-arrow {
+        right: 10px;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-image-container {
+        width: 220px;
+        height: 320px;
+        margin: 0 auto 30px auto;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+}
+
+/* --- Archivo de Proyectos (Dossier Look) --- */
+.project-archive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-dossier {
+    background: color-mix(in srgb, var(--card-bg), transparent 40%);
+    border: 1px solid color-mix(in srgb, var(--text-muted), transparent 80%);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s var(--mechanical-curve);
+}
+
+.project-dossier:hover {
+    border-color: var(--accent-blue);
+    background: color-mix(in srgb, var(--bg-dark), var(--white-pure) 2%);
+    transform: translateX(10px);
+}
+
+/* Header del expediente */
+.dossier-header {
+    background: color-mix(in srgb, var(--terminal-header), transparent 30%);
+    padding: 6px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--text-muted), transparent 90%);
+    letter-spacing: 1px;
+}
+
+.dossier-id {
+    color: var(--text-muted);
+}
+
+.dossier-status {
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+/* Cuerpo del expediente */
+.dossier-body {
+    padding: 1.5rem;
+}
+
+.dossier-preview {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--terminal-bg);
+    overflow: hidden;
+    border: 1px solid var(--terminal-border);
+}
+
+.dossier-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    filter: grayscale(0.5);
+    transition: all 0.5s var(--mechanical-curve);
+}
+
+.project-dossier:hover .dossier-preview img {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* Efecto Scan-line */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-blue);
+    box-shadow: 0 0 10px var(--accent-blue);
+    opacity: 0;
+    z-index: 5;
+}
+
+.project-dossier:hover .scan-line {
+    animation: scan-move 2s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes scan-move {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* Tech Stack Tags */
+.tech-stack span {
+    font-size: 0.65rem;
+    background: color-mix(in srgb, var(--accent-blue), transparent 90%);
+    color: var(--accent-blue);
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-right: 5px;
+    border: 1px solid color-mix(in srgb, var(--accent-blue), transparent 70%);
+}
+
+/* Botón Interno */
+.btn-dossier-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    border: 1px solid var(--terminal-border);
+    transition: all 0.3s var(--mechanical-curve);
+}
+
+.btn-dossier-link:hover {
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+    border-color: var(--accent-blue);
+}
+
+/* Badge de Proyecto Destacado */
+.badge-featured {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    background: color-mix(in srgb, var(--accent-blue), transparent 85%);
+    color: var(--accent-blue);
+    border: 1px solid color-mix(in srgb, var(--accent-blue), transparent 60%);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* Contenedor de Media con efecto Glass */
+.project-media-container {
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--white-pure), transparent 90%);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.media-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, color-mix(in srgb, var(--bg-dark), transparent 60%) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* --- Carrusel de Galería (Proyecto Detalle) --- */
+.project-media-container .carousel-indicators [data-bs-target] {
+    background-color: var(--accent-blue);
+    border-top: none;
+    border-bottom: none;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.project-media-container .carousel-control-prev-icon,
+.project-media-container .carousel-control-next-icon {
+    filter: drop-shadow(0 0 5px var(--bg-dark));
+}
+
+.project-media-container .carousel-inner img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+/* Sidebar Meta Card (Industrial Tech Style)  */
+.sidebar-project {
+    z-index: 10;
+    /* Se desliza por debajo del navbar (z-index 100) */
+}
+
+.project-meta-card {
+    background-color: var(--card-bg);
+    border: 1px solid color-mix(in srgb, var(--white-pure), transparent 92%);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.tag-fira {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: color-mix(in srgb, var(--white-pure), transparent 95%);
+    padding: 4px 10px;
+    border: 1px solid color-mix(in srgb, var(--white-pure), transparent 90%);
+    border-radius: 4px;
+}
+
+.status-indicator-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.hover-white:hover {
+    color: var(--white-pure) !important;
+}

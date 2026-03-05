@@ -1,0 +1,90 @@
+{
+  "proyectos": [
+    {
+      "id": "electrika",
+      "title": "elECtrika",
+      "category": "Directorio de Movilidad Eléctrica / Web App",
+      "platform": "Web App",
+      "status": "STABLE",
+      "featured": true,
+      "icon": "bi-lightning-charge",
+      "short_desc": "Plataforma integral para buscar, comparar y calcular el impacto de adquirir vehículos eléctricos en Ecuador.",
+      "problem": "La transición a la movilidad eléctrica en Ecuador presenta un reto importante: la información sobre los vehículos eléctricos disponibles, sus características técnicas (batería, autonomía, conectores) y precios se encuentra dispersa, desactualizada o no permite una comparación justa entre marcas.",
+      "ux": "El diseño prioriza la facilidad de exploración y la toma de decisiones informada. Se implementó una búsqueda instantánea y tolerante a errores, un comparador técnico lado a lado, y una calculadora de impacto que traduce la eficiencia energética en ahorro económico anual real frente a vehículos de combustión.",
+      "dev": "Desarrollado como una SPA robusta usando Next.js y TypeScript para un tipado estricto de las estructuras de datos vehiculares. Se integró Fuse.js para búsquedas difusas en tiempo real y componentes reutilizables con Tailwind CSS, garantizando una arquitectura escalable capaz de manejar variaciones complejas de modelos y versiones.",
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Fuse.js"
+      ],
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1200",
+      "gallery": [
+        "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1200",
+        "https://images.unsplash.com/photo-1518984920455-5abe4032a9db?q=80&w=1200",
+        "https://images.unsplash.com/photo-1503375894084-9988ff88514a?q=80&w=1200"
+      ],
+      "alt": "Interfaz principal del catálogo interactivo elECtrika",
+      "demoUrl": "https://github.com/YurakCh/elECtrika",
+      "demoLabel": "Visitar App Web",
+      "demoIcon": "bi-globe",
+      "repoUrl": "https://github.com/YurakCh/elECtrika"
+    },
+    {
+      "id": "chronicles-ember",
+      "title": "Chronicles of the Fading Ember",
+      "category": "Juegos / IA / Chatbot",
+      "platform": "Servidor Local / Prototipo",
+      "status": "PROTOTYPE",
+      "featured": false,
+      "icon": "bi-code-slash",
+      "short_desc": "Creación de un juego Basado en IA que te permita crear tu propio camino en una historia base. El destino en verdad cambia en base a todas tus palabras, intenciones y acciones.",
+      "problem": "Chatbots pueden ser limitados en su capacidad de adaptación y personalización para juegos de rol dinámicos.",
+      "ux": "Diseño de interfaz de texto minimalista inspirada en aventuras conversacionales clásicas.",
+      "dev": "Integración de Gemini ejecutándose como motor de videojuegos procesando las entradas de forma procedural.",
+      "tech": [
+        "HTML",
+        "JavaScript",
+        "Gemini"
+      ],
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+        "https://images.unsplash.com/photo-1605333062060-c44bbad00e57?q=80&w=800",
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800"
+      ],
+      "alt": "Interfaz de texto del juego Chronicles of the Fading Ember",
+      "demoUrl": "#",
+      "repoUrl": "#"
+    },
+    {
+      "id": "allay",
+      "title": "Allay - IA local y segura",
+      "category": "Automatización / IA",
+      "platform": "Servidor Local / Prototipo",
+      "status": "PROTOTYPE",
+      "featured": false,
+      "icon": "bi-cpu",
+      "short_desc": "Implementación de Agente IA personal en servidor local.",
+      "problem": "La dependencia de la nube en domótica compromete la privacidad y depende de latencias externas.",
+      "ux": "Diseño de interfaz minimalista para tablets empotradas en pared.",
+      "dev": "Integración de Gemini ejecutándose localmente mediante Docker para procesamiento edge.",
+      "tech": [
+        "Python",
+        "Gemini",
+        "Docker",
+        "Openclaw"
+      ],
+      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+      "gallery": [
+        "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800"
+      ],
+      "alt": "Panel de control domótico del sistema Allay",
+      "demoUrl": "#",
+      "repoUrl": "#"
+    }
+  ]
+}
