@@ -19,11 +19,12 @@
         "Tailwind CSS",
         "Fuse.js"
       ],
-      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1200",
+      "image": "Images/elECtrika/elECtrikaIndex.png",
       "gallery": [
-        "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1200",
-        "https://images.unsplash.com/photo-1518984920455-5abe4032a9db?q=80&w=1200",
-        "https://images.unsplash.com/photo-1503375894084-9988ff88514a?q=80&w=1200"
+        "Images/elECtrika/elECtrikaIndex.png",
+        "Images/elECtrika/elECtrikaBuscador.png",
+        "Images/elECtrika/elECtrikaComparador.png",
+        "Images/elECtrika/elECtrikaCalculadora.png"
       ],
       "alt": "Interfaz principal del catálogo interactivo elECtrika",
       "demoUrl": "https://github.com/YurakCh/elECtrika",
@@ -50,11 +51,14 @@
     "Google Gemini API",
     "Vite"
   ],
-  "image": "https://images.unsplash.com/photo-1614726365723-49cfae96c694?q=80&w=800",
+  "image": "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-0.png",
   "gallery": [
-    "https://images.unsplash.com/photo-1614726365723-49cfae96c694?q=80&w=800",
-    "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=800",
-    "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800"
+    "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-1.png",
+    "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-2.png",
+    "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-3.png",
+    "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-4.png",
+    "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-5.png",
+    "Images/Chronicles-of-the-Fading-Ember/Chronicles-of-the-Fading-Ember-6.png"
   ],
   "alt": "Interfaz de Chronicles of the Fading Ember mostrando narrativa generativa",
   "demoUrl": "https://ai.studio/apps/2c66f368-ac07-49c4-a122-cb27f73d9258?fullscreenApplet=true",
