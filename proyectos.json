@@ -32,59 +32,62 @@
       "repoUrl": "https://github.com/YurakCh/elECtrika"
     },
     {
-      "id": "chronicles-ember",
-      "title": "Chronicles of the Fading Ember",
-      "category": "Juegos / IA / Chatbot",
-      "platform": "Servidor Local / Prototipo",
-      "status": "PROTOTYPE",
-      "featured": false,
-      "icon": "bi-code-slash",
-      "short_desc": "Creación de un juego Basado en IA que te permita crear tu propio camino en una historia base. El destino en verdad cambia en base a todas tus palabras, intenciones y acciones.",
-      "problem": "Chatbots pueden ser limitados en su capacidad de adaptación y personalización para juegos de rol dinámicos.",
-      "ux": "Diseño de interfaz de texto minimalista inspirada en aventuras conversacionales clásicas.",
-      "dev": "Integración de Gemini ejecutándose como motor de videojuegos procesando las entradas de forma procedural.",
-      "tech": [
-        "HTML",
-        "JavaScript",
-        "Gemini"
-      ],
-      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
-      "gallery": [
-        "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
-        "https://images.unsplash.com/photo-1605333062060-c44bbad00e57?q=80&w=800",
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800"
-      ],
-      "alt": "Interfaz de texto del juego Chronicles of the Fading Ember",
-      "demoUrl": "#",
-      "repoUrl": "#"
-    },
+  "id": "chronicles-ember",
+  "title": "Chronicles of the Fading Ember",
+  "category": "Interactive Fiction / Generative AI / RPG",
+  "platform": "Web Application",
+  "status": "PROTOTYPE",
+  "featured": true,
+  "icon": "bi-fire",
+  "short_desc": "Aventura de rol textual de fantasía oscura donde una IA actúa como 'Dungeon Master' en tiempo real, adaptando la historia, el inventario y las consecuencias a cada decisión del jugador.",
+  "problem": "Los juegos de aventura clásicos están limitados por árboles de decisión predefinidos, mientras que los chatbots estándar carecen de memoria de estado (inventario, salud) y coherencia narrativa a largo plazo.",
+  "ux": "Interfaz minimalista y atmosférica ('Dark Mode') que prioriza la inmersión lectora, utilizando tipografía serif y animaciones sutiles para evocar la sensación de una novela viva.",
+  "dev": "Arquitectura 'State-Aware LLM' construida en React. El sistema inyecta el estado del juego (inventario, stats) en el contexto de Gemini, permitiendo que el modelo valide acciones y mantenga la consistencia lógica del mundo sin alucinaciones.",
+  "tech": [
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS",
+    "Google Gemini API",
+    "Vite"
+  ],
+  "image": "https://images.unsplash.com/photo-1614726365723-49cfae96c694?q=80&w=800",
+  "gallery": [
+    "https://images.unsplash.com/photo-1614726365723-49cfae96c694?q=80&w=800",
+    "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=800",
+    "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800"
+  ],
+  "alt": "Interfaz de Chronicles of the Fading Ember mostrando narrativa generativa",
+  "demoUrl": "https://ais-pre-hgxbvq6r2poplglow3x5co-74605440353.us-east1.run.app",
+  "repoUrl": "#"
+},
     {
-      "id": "allay",
-      "title": "Allay - IA local y segura",
-      "category": "Automatización / IA",
-      "platform": "Servidor Local / Prototipo",
-      "status": "PROTOTYPE",
-      "featured": false,
-      "icon": "bi-cpu",
-      "short_desc": "Implementación de Agente IA personal en servidor local.",
-      "problem": "La dependencia de la nube en domótica compromete la privacidad y depende de latencias externas.",
-      "ux": "Diseño de interfaz minimalista para tablets empotradas en pared.",
-      "dev": "Integración de Gemini ejecutándose localmente mediante Docker para procesamiento edge.",
-      "tech": [
-        "Python",
-        "Gemini",
-        "Docker",
-        "Openclaw"
-      ],
-      "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
-      "gallery": [
-        "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
-        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800"
-      ],
-      "alt": "Panel de control domótico del sistema Allay",
-      "demoUrl": "#",
-      "repoUrl": "#"
-    }
+  "id": "allay",
+  "title": "Allay - Orquestación de IA y API Gateway",
+  "category": "Arquitectura Backend / IA",
+  "platform": "Servidor Ubuntu Linux",
+  "status": "PROTOTYPE",
+  "featured": false,
+  "icon": "bi-hdd-network",
+  "short_desc": "Despliegue de servidor y desarrollo de un Proxy/Gestor de APIs personalizado para un ecosistema de IA autónoma.",
+  "problem": "La dependencia de cuotas restrictivas en APIs de IA (rate limits) y la necesidad de gestionar múltiples llaves de acceso sin interrumpir la experiencia del asistente inteligente.",
+  "ux": "Arquitectura invisible para el usuario final (Telegram), garantizando respuestas ininterrumpidas mediante una lógica de fallback y recuperación automática profunda.",
+  "dev": "Despliegue en servidor Ubuntu. Desarrollo desde cero de un 'Brain Proxy' en Python que actúa como enrutador inteligente: balancea la carga de tokens, rota llaves de API agotadas (manejo de errores 429) y enruta peticiones hacia Gemini, sirviendo como motor lógico para la plataforma OpenClaw.",
+  "tech": [
+    "Python",
+    "Ubuntu Server",
+    "API Management",
+    "OpenClaw (Framework)",
+    "Gemini API"
+  ],
+  "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+  "gallery": [
+    "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800",
+    "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800",
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800"
+  ],
+  "alt": "Arquitectura de red y servidores del sistema Allay",
+  "demoUrl": "#",
+  "repoUrl": "#"
+}
   ]
 }
