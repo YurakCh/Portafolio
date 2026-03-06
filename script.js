@@ -556,7 +556,7 @@ const tabManager = {
 const ProjectService = {
     async getAll() {
         try {
-            const response = await fetch('proyectos.json');
+            const response = await fetch('proyectos.json?v=' + new Date().getTime());
             const data = await response.json();
             return data.proyectos;
         } catch (error) {
