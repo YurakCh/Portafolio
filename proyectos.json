@@ -57,8 +57,8 @@
     "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800"
   ],
   "alt": "Interfaz de Chronicles of the Fading Ember mostrando narrativa generativa",
-  "demoUrl": "https://ais-pre-hgxbvq6r2poplglow3x5co-74605440353.us-east1.run.app",
-  "repoUrl": "#"
+  "demoUrl": "https://ai.studio/apps/2c66f368-ac07-49c4-a122-cb27f73d9258?fullscreenApplet=true",
+  "repoUrl": "https://github.com/YurakCh/Chronicles-of-the-Fading-Ember"
 },
     {
   "id": "allay",
@@ -85,9 +85,7 @@
     "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800",
     "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800"
   ],
-  "alt": "Arquitectura de red y servidores del sistema Allay",
-  "demoUrl": "#",
-  "repoUrl": "#"
+  "alt": "Arquitectura de red y servidores del sistema Allay"
 }
   ]
 }
